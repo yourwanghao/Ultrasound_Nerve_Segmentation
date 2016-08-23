@@ -4,7 +4,8 @@ from mxnet.io import DataIter
 from mxnet.io import DataBatch
 import random
 import cv2
-import settings
+import sys
+import settings as settings
 import os
 import logging
 from scipy.ndimage.interpolation import map_coordinates

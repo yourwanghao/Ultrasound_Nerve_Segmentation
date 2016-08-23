@@ -6,7 +6,9 @@ from fileiter import FileIter
 import cv2
 import os
 
-from symbol_common import *
+import sys
+sys.path.append("..")
+from symbols.symbol_common import *
 
 def convolution_module(net, kernel_size=(3,3), pad_size=(1,1), stride=(1, 1), filter_count = 32, work_space=2048, batch_norm=True, stage="stage1", bsize=settings.SEGMENT_BATCH_SIZE):
     net = mx.sym.Convolution(data=net, kernel=kernel_size, stride=stride, pad=pad_size, num_filter=filter_count,

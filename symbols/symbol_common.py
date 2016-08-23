@@ -1,8 +1,7 @@
-import settings
+import utils.settings as settings
 import numpy as np
 import mxnet as mx
 import logging
-from fileiter import FileIter
 import cv2
 import os
 

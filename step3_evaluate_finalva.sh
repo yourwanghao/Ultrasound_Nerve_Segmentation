@@ -15,7 +15,7 @@ do
    epoch=`sed -n "$i,$j"p result.log|grep $value|sed 's/.*Epoch\[//g'|sed 's/].*//g'`
    ((epoch=epoch+1))
    sed -n "$i, $j"p result.log| grep $value |sed "s/.*Vali/fold $f, epoch: $epoch Vali/g"
-   echo "./prepare_image.py --fold_id $f --epoch $epoch --threshold 0 --file_list './finalva.lst.processed'" >> .run_evaluate.sh
+   echo "./utils/prepare_image.py --fold_id $f --epoch $epoch --threshold 0 --file_list './finalva.lst.processed'" >> .run_evaluate.sh
    ((i=i+epoch_per_fold))
    ((j=j+epoch_per_fold))
    ((f=f+1))
@@ -25,7 +25,7 @@ do
    fi
 done
 
-echo "./combine_evaluate.py --file_list='./finalva.lst' --compute_dcs=1" >> .run_evaluate.sh
+echo "./utils/combine_evaluate.py --file_list='./finalva.lst' --compute_dcs=1" >> .run_evaluate.sh
 
 chmod +x ./.run_evaluate.sh
 ./.run_evaluate.sh

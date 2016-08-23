@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import os
-import settings
+import utils.settings as settings
 import numpy as np
 from sklearn.cross_validation import KFold
 import random
@@ -10,8 +10,6 @@ import cv2
 import pickle
 import pandas
 
-from symbol_unet_orig import get_unet_orig
-from fileiter import FileIter
 import mxnet as mx
 import h5py
 import argparse

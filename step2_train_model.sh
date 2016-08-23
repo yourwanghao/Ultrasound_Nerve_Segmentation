@@ -1,3 +1,3 @@
 #!/usr/bin/zsh
 
-./train_model.py 0
+./utils/train_model.py 0

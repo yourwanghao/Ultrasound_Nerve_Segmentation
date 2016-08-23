@@ -4,12 +4,12 @@ import numpy as np
 import cv2
 import math
 import pandas
-import settings
+import utils.settings as settings
 import os
 import random
 import csv
 import shutil
-from symbol_common import *
+from symbols.symbol_common import *
 
 def process_image(srcfile, save_dir=None, isTrain=True):
     '''

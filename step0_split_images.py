@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import os
-import settings
+import utils.settings as settings
 import numpy as np
 from sklearn.cross_validation import KFold
 import random

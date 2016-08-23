@@ -8,10 +8,10 @@ import glob
 import csv
 import cv2
 
-from symbol_unet_orig import get_unet_orig
-from symbol_unet_large import get_unet_large
-from symbol_unet_small import get_unet_small
-from symbol_common import *
+import sys
+sys.path.append(".")
+from symbols.symbol_unet_small import get_unet_small
+from symbols.symbol_common import *
 
 import gc
 

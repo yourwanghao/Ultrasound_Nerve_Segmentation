@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import cv2
-import settings
+import utils.settings as settings
 import numpy as np
 import matplotlib.pyplot as plt
 import os
